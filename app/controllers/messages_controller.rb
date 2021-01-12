@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
+  # before_action: find_message: only: [:show, ]
   def index
+    @messages = Message.all.order("created_at DESC")
   end
 
   def new
@@ -14,6 +16,12 @@ class MessagesController < ApplicationController
       render 'new'
     end
   end
+
+  def show
+    @message = Message.find(params[:id])
+  end
+
+
 
   private
 
