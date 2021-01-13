@@ -1,5 +1,9 @@
 <% @messages.each do |message| %>
-  <h2><%= message.title %></h2>
-  <%= link_to "Join Discussion", message, class:"btn btn-default"  %>
-<% end %>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="message">
+      <h2 class="message-title"><%= message.title %></h2>
+      <%= link_to "Join Convo", message, class: "btn-custom" %>
+    </div>
+  </div>
 
+<% end %>
