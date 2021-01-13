@@ -1,6 +1,5 @@
 <% @messages.each do |message| %>
   <h2><%= message.title %></h2>
-  <%= link_to "Join Discussion", message, class:"btn btn-primary"  %>
+  <%= link_to "Join Discussion", message, class:"btn btn-default"  %>
 <% end %>
-<p><%= link_to "Post Message", new_message_path %></p>
 
